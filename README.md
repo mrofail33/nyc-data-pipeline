@@ -193,3 +193,16 @@ This project shows that you can:
 - Store data in a relational database
 - Write SQL queries for analysis
 - Explain a complete data pipeline in simple terms
+
+## Interview Proof
+
+This is a local ETL project, not a production data platform. The repo now includes:
+
+- focused transform tests in `tests/`
+- a GitHub Actions CI workflow in `.github/workflows/ci.yml`
+- an interview-safe explanation in `docs/interview-proof.md`
+- operations proof notes in `docs/operations-proof.md`
+
+Safe resume wording:
+
+> Built a Python ETL pipeline that extracts NYC 311 data from a public API, cleans and normalizes it with pandas, loads it into PostgreSQL, and supports SQL analysis.
