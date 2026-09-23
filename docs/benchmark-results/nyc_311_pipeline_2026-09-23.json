@@ -1,0 +1,16 @@
+{
+  "benchmark_date": "2026-09-23",
+  "requested_record_limit": 10000,
+  "raw_records_downloaded": 10000,
+  "duplicates_removed": 0,
+  "rows_missing_unique_key_or_created_date": 0,
+  "missing_text_values_handled": 3906,
+  "final_rows_ready_to_load": 10000,
+  "final_rows_loaded": null,
+  "load_status": "blocked",
+  "load_error": "OperationalError: connection to server at \"localhost\" (::1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\nconnection to server at \"localhost\" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)\n\tIs the server running on that host and accepting TCP/IP connections?\n",
+  "extract_seconds": 0.8028082000000722,
+  "transform_seconds": 0.08488740000007056,
+  "load_seconds": 4.097481400000106,
+  "total_runtime_seconds": 4.995800500000087
+}

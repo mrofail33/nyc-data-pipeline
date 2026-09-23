@@ -176,6 +176,16 @@ The transform step does a few practical cleaning tasks:
 - Creates `created_month`
 - Selects only useful columns for analysis
 
+## Measured Pipeline Run
+
+Benchmark completed on 2026-09-23 with `RECORD_LIMIT=10000` using the live NYC Open Data API. Raw evidence is saved in `docs/benchmark-results/nyc_311_pipeline_2026-09-23.json`.
+
+| Raw records downloaded | Duplicates removed | Rows missing key/date | Missing text values handled | Final rows ready to load | Final rows loaded | Runtime |
+| ---: | ---: | ---: | ---: | ---: | --- | ---: |
+| 10,000 | 0 | 0 | 3,906 | 10,000 | Not loaded: PostgreSQL unavailable | 5.00 sec |
+
+The extract and transform stages completed successfully. The load stage was blocked because no PostgreSQL server was listening on `localhost:5432`, so this run does not claim rows loaded into PostgreSQL.
+
 ## Interview Explanation
 
 > I built an ETL pipeline in Python that extracts NYC 311 service request records from NYC Open Data, transforms the data with pandas by cleaning dates, missing values, duplicates, and text fields, and loads the cleaned data into PostgreSQL for SQL analysis.
@@ -206,3 +216,7 @@ This is a local ETL project, not a production data platform. The repo now includ
 Safe resume wording:
 
 > Built a Python ETL pipeline that extracts NYC 311 data from a public API, cleans and normalizes it with pandas, loads it into PostgreSQL, and supports SQL analysis.
+
+Resume-ready quantified bullet:
+
+- Processed 10,000 live NYC 311 records in 5.00 seconds through extract and transform, handling 3,906 missing text values and preparing 10,000 cleaned rows for loading; PostgreSQL load verification was blocked because the local database service was unavailable.
